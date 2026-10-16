@@ -1,0 +1,111 @@
+# LinkedIn Referral Scout
+
+**Turn a job description into a ranked referral shortlist and personalized drafts you review before contacting anyone.**
+
+A reusable agent skill for job seekers who want to know whom to approach, why that person fits, and how to start a useful conversation. It works from professional profile excerpts you supply, or through a supported connection to your signed-in Chrome session.
+
+```text
+Job description + your experience + profile evidence
+                         ↓
+           3–5 contacts, ranked with reasons
+                         ↓
+         Personal message options for each person
+                         ↓
+             Your review before any contact
+```
+
+**Try it without LinkedIn access:** use the [fictional demo input](examples/demo-input.md) and compare the result with the [sample walkthrough](examples/walkthrough.md).
+
+## What you get
+
+| Output | What it answers |
+|---|---|
+| Ranked shortlist | Who has the strongest overlap with this role? |
+| Evidence for each choice | Which professional facts support the recommendation, and what is uncertain? |
+| Optional alumni preference | Is there a supported connection to your chosen institution or program? |
+| Personalized drafts | Would advice-first, alumni, experience-led, or direct outreach fit this relationship? |
+| Approval preview | Exactly who would receive what, through which action, with which links? |
+
+Role relevance comes first. An engineer working on the relevant system can outrank an alumnus in an unrelated department. The skill distinguishes confirmed evidence from assumptions and does not invent a shared university, relationship, achievement, or hiring role.
+
+## Try the fictional example
+
+You need an agent that can read local Markdown instructions, such as Codex. The supplied-evidence demo requires no LinkedIn login, browser integration, or API key in this repository. Your agent's own access requirements and usage costs still apply.
+
+Clone and open this folder in your agent:
+
+```sh
+git clone https://github.com/amulyagupta1278/linkedin-referral-scout.git
+cd linkedin-referral-scout
+```
+
+Ask:
+
+```text
+Read SKILL.md and apply it to examples/demo-input.md.
+Use only the fictional evidence in that file. Do not browse or contact anyone.
+Rank the contacts, explain the evidence and uncertainties, and draft two
+message options for the best first contact. Stop at the approval preview.
+```
+
+This demonstrates the workflow on synthetic evidence. It does not demonstrate live LinkedIn access or predict whether a real person will offer a referral.
+
+## Install as a Codex skill
+
+For a user-level installation on macOS or Linux:
+
+```sh
+mkdir -p "$HOME/.agents/skills"
+git clone https://github.com/amulyagupta1278/linkedin-referral-scout.git \
+  "$HOME/.agents/skills/linkedin-referral-scout"
+```
+
+If that folder already exists, inspect your existing installation instead of overwriting it. Avoid installing another copy under the same skill name in a different discovery directory. Codex detects installed skills; restart it if the skill does not appear. These locations and invocation behavior are documented in [OpenAI's skill guide](https://developers.openai.com/codex/skills).
+
+Then ask:
+
+```text
+Use $linkedin-referral-scout for this job description.
+
+Job: [paste the description or URL]
+My relevant experience: [one or two truthful achievements]
+Preferred alumni institution/program: [optional; say none to skip]
+My own connection to that institution: [state it truthfully, or none]
+Profile evidence: [paste relevant excerpts and source URLs]
+
+Rank up to five people and prepare personalized drafts. Do not contact anyone.
+```
+
+The package uses the Agent Skills format. Other hosts may load it according to their own instructions; cross-host behavior has not been verified.
+
+## Using live LinkedIn research
+
+Live research additionally needs a host-provided browser tool that can access the Chrome session you authorize. This repository does not install a browser tool, supply a LinkedIn connector, or manage login credentials. A CLI-only or remote environment may not have this capability.
+
+1. Confirm your agent has a supported Chrome connection.
+2. Sign into LinkedIn yourself.
+3. Ask the agent to research the role through that connection, with any alumni preference stated explicitly.
+4. Review the shortlist and drafts. Contacting someone requires a separate, exact action preview and approval.
+
+If no supported browser connection is available, copy the relevant professional profile excerpts into the supplied-evidence workflow. A profile URL alone is not evidence of employment, education, or a relationship.
+
+## Boundaries and limitations
+
+- This is an instruction-based skill. It has no executable service, mass-outreach engine, or autonomous follow-up scheduler.
+- The approval checkpoint is a behavioral instruction, not a technical access-control mechanism. Review the agent's actions and your host's permissions.
+- Research is limited to a small shortlist. The instructions exclude scraping services, access-control bypasses, cookie inspection, and contact actions during research.
+- Your agent provider and browser integration may process the information you supply. This repository has no telemetry service of its own; that does not mean the surrounding tools process everything locally.
+- Profiles can be incomplete or outdated. Confirm critical details before contacting someone, and use LinkedIn and your tools within their applicable rules.
+- No claims of referrals obtained, time saved, or live-browser reliability are made for this release. The included example is fictional.
+
+Independent project; not affiliated with or endorsed by LinkedIn or OpenAI.
+
+## Contribute
+
+Useful contributions include anonymized failure cases, clearer setup instructions, and evidence of behavior on another host. See [CONTRIBUTING.md](CONTRIBUTING.md) and the [behavioral review cases](evals/scenarios.md). Never submit real resumes, private contact lists, message histories, or credentials in issues or pull requests.
+
+If the workflow is useful, a star helps people discover it. More useful still: describe where the sample or setup was confusing.
+
+## License
+
+[MIT](LICENSE) © 2026 Amulya Gupta.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "LinkedIn Referral Scout"
+  short_description: "Rank referral contacts and draft personal outreach"
+  default_prompt: "Use $linkedin-referral-scout to analyze this job description, rank relevant contacts using available professional evidence and my optional alumni preference, and prepare personalized message options for my review before any contact action."
