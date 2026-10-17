@@ -1,0 +1,56 @@
+name: First-run feedback
+description: Tell us where the fictional example worked or became confusing.
+title: "First run: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use the fictional example. This issue is public: do not include resumes, real profile details, messages, credentials, or screenshots of private information.
+  - type: input
+    id: environment
+    attributes:
+      label: Your setup
+      description: Operating system, agent name/version, and model if known.
+      placeholder: macOS, Codex CLI, version ...
+    validations:
+      required: true
+  - type: dropdown
+    id: installation
+    attributes:
+      label: Installation method
+      options:
+        - skills CLI
+        - git clone
+        - Read the files directly
+        - Another method
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Could you finish the fictional example without help?
+      options:
+        - Yes
+        - Only with help
+        - No
+    validations:
+      required: true
+  - type: input
+    id: time
+    attributes:
+      label: Approximate time to your first useful result
+      placeholder: About 5 minutes, or never reached a useful result
+  - type: textarea
+    id: friction
+    attributes:
+      label: First confusing step or error
+      description: Describe what you expected and what happened. Say none if everything was clear.
+    validations:
+      required: true
+  - type: textarea
+    id: usefulness
+    attributes:
+      label: Were the ranking reasons and drafts useful?
+      description: Which fictional recommendation or wording would you change? Would you use the skill again?
+    validations:
+      required: true

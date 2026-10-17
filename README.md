@@ -16,6 +16,12 @@ Job description + your experience + profile evidence
 
 **Try it without LinkedIn access:** use the [fictional demo input](examples/demo-input.md) and compare the result with the [sample walkthrough](examples/walkthrough.md).
 
+[![Edited walkthrough of an actual Codex run: fictional inputs, ranked contacts, uncertainty, a draft, and review before contact.](assets/demo.gif)](assets/referral-scout-demo.mp4)
+
+[Watch or download the 45-second video](assets/referral-scout-demo.mp4) · [Read the full captured output](examples/recorded-run.md)
+
+The video presents unchanged excerpts from a real run, edited into a visual walkthrough. It uses fictional profiles and is not a screen recording, a live LinkedIn demonstration, or a referral-success claim.
+
 ## What you get
 
 | Output | What it answers |
@@ -52,7 +58,31 @@ This demonstrates the workflow on synthetic evidence. It does not demonstrate li
 
 ## Install as a Codex skill
 
-For a user-level installation on macOS or Linux:
+### Install in your project with the skills CLI
+
+Requires Git, Node.js 22.20 or later, and your own Codex access. Run this from the project folder where you want to use the skill:
+
+```sh
+npx skills add amulyagupta1278/linkedin-referral-scout --agent codex
+```
+
+Open that project in Codex, then try:
+
+```text
+Use $linkedin-referral-scout and apply it to
+.agents/skills/linkedin-referral-scout/examples/demo-input.md.
+Use only the fictional evidence. Do not browse or contact anyone.
+Rank the four contacts, explain uncertainty, and draft two messages
+for the best first contact. Stop at the manual-handoff preview.
+```
+
+Verified on macOS with skills CLI 1.7.2, Node 24.19.0, and Codex CLI 0.162.0-alpha.17.2. The installed example files and a full supplied-evidence run were checked. Windows and other agent hosts have not been verified.
+
+The skills CLI collects installation telemetry by default; its [documentation](https://www.skills.sh/docs/cli) describes the `DISABLE_TELEMETRY=1` opt-out. Maintainer smoke tests used that opt-out and are not counted as outside-user adoption. This installation route does not establish a skills.sh ranking or GitHub Trending placement.
+
+### Install manually for all your projects
+
+For a user-level installation on macOS or Linux using Git:
 
 ```sh
 mkdir -p "$HOME/.agents/skills"
@@ -103,6 +133,8 @@ Independent project; not affiliated with or endorsed by LinkedIn or OpenAI.
 ## Contribute
 
 Useful contributions include anonymized failure cases, clearer setup instructions, and evidence of behavior on another host. See [CONTRIBUTING.md](CONTRIBUTING.md) and the [behavioral review cases](evals/scenarios.md). Never submit real resumes, private contact lists, message histories, or credentials in issues or pull requests.
+
+Trying the fictional example for the first time? [Report your first-run feedback](https://github.com/amulyagupta1278/linkedin-referral-scout/issues/new?template=first-run.yml): whether setup worked, the first confusing step, and whether the ranking and drafts were useful. There is no need to share a resume or connect LinkedIn.
 
 If the workflow is useful, a star helps people discover it. More useful still: describe where the sample or setup was confusing.
 

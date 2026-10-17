@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.1 — 2026-10-17
+
+### Added
+
+- A verified project-level installation path through the skills CLI, with requirements and a ready-to-run fictional example prompt.
+- A 45-second edited walkthrough of actual Codex output, plus the full unedited final response and capture details.
+- A first-run feedback form for reporting setup friction and draft usefulness using fictional data.
+
+### Verification
+
+- Public v0.1.0 installed in a clean macOS project with skills CLI 1.7.2; the installed instructions and example completed in Codex CLI.
+- Message counts and video excerpts were checked against the captured output. No live LinkedIn research or messaging was tested.
+
 ## 0.1.0 — 2026-10-16
 
 ### Added
