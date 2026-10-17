@@ -16,11 +16,7 @@ Job description + your experience + profile evidence
 
 **Try it without LinkedIn access:** use the [fictional demo input](examples/demo-input.md) and compare the result with the [sample walkthrough](examples/walkthrough.md).
 
-[![Edited walkthrough of an actual Codex run: fictional inputs, ranked contacts, uncertainty, a draft, and review before contact.](assets/demo.gif)](assets/referral-scout-demo.mp4)
-
-[Watch or download the 45-second video](assets/referral-scout-demo.mp4) · [Read the full captured output](examples/recorded-run.md)
-
-The video presents unchanged excerpts from a real run, edited into a visual walkthrough. It uses fictional profiles and is not a screen recording, a live LinkedIn demonstration, or a referral-success claim.
+[Read the full captured output](examples/recorded-run.md) from a fictional supplied-evidence run.
 
 ## What you get
 

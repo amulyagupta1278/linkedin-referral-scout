@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 — 2026-10-17
+
+### Removed
+
+- Generated demo video, animated preview, poster, and media links at the maintainer's request. The captured text example and verified installation instructions remain available.
+
 ## 0.1.1 — 2026-10-17
 
 ### Added

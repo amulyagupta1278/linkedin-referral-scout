@@ -4,7 +4,7 @@ Captured 17 October 2026 with Codex CLI 0.162.0-alpha.17.2, using the public v0.
 
 The agent read only the installed SKILL.md and fictional demo input, then calculated message lengths locally. It did not read the illustrative walkthrough, browse, or contact anyone. Both character counts were independently checked. The run took approximately 44 seconds after installation; this is one maintainer test, not a user benchmark. Model output can vary.
 
-The [45-second video](../assets/referral-scout-demo.mp4) is an edited visual walkthrough of excerpts from this captured output, not a screen recording or a claim about interaction speed. Typography and line wrapping are reformatted; displayed output excerpts are unchanged. The transcript below is the full final response, unedited. All evidence and people are fictional. The surrounding agent's model access and usage costs still apply.
+The transcript below is the full final response, unedited. All evidence and people are fictional. The surrounding agent's model access and usage costs still apply. This run does not validate live LinkedIn access or referral outcomes.
 
 Raw final-response SHA-256: `b223e12cc32e0af10ce9b6ddbed012e7b49c148b601d1d5edde39edcd3d95ad4`.
 
